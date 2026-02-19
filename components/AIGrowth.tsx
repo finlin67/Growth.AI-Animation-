@@ -74,7 +74,17 @@ export default function AIGrowth() {
   return (
     <div className="w-full h-full max-w-[600px] max-h-[600px] aspect-square flex items-center justify-center p-2 relative overflow-hidden group bg-[#0f172a] rounded-3xl border border-slate-800 shadow-2xl">
       {/* Background Decorative Grid */}
-      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px]" />
+      <motion.div 
+        animate={{ 
+          backgroundPosition: ["0px 0px", "24px 24px"] 
+        }}
+        transition={{ 
+          duration: 20, 
+          ease: "linear", 
+          repeat: Infinity 
+        }}
+        className="absolute inset-0 opacity-5 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px]" 
+      />
       
       {/* Animated Gradient Orbs */}
       <motion.div 
